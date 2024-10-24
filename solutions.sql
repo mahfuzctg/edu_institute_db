@@ -66,3 +66,14 @@ FROM students s
 JOIN enrollment e ON s.student_id = e.student_id
 JOIN courses c ON e.course_id = c.course_id
 WHERE c.course_name = 'Next.js';
+
+
+-- QUERY 3: UPDATE THE STATUS THE STUDENT WITH THE HIGHEST TOTAL MARKS!
+UPDATE students
+SET status = 'Awarded'
+WHERE student_id = (
+    SELECT student_id
+    FROM students
+    ORDER BY (frontend_mark + backend_mark) DESC
+    LIMIT 1
+);
