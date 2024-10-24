@@ -77,3 +77,7 @@ WHERE student_id = (
     ORDER BY (frontend_mark + backend_mark) DESC
     LIMIT 1
 );
+
+-- QUERY 4: DELETE COURSES WITH NO STUDENTS ENROLLED!
+DELETE FROM courses
+WHERE course_id NOT IN (SELECT DISTINCT course_id FROM enrollment);
