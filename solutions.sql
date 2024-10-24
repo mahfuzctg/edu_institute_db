@@ -42,3 +42,10 @@ INSERT INTO courses (course_name, credits) VALUES
 ('React.js', 4),
 ('Databases', 3),
 ('Prisma', 3);
+
+-- INSERT SAMPLE DATA INTO THE ENROLLMENT TABLE!
+INSERT INTO enrollment (student_id, course_id) VALUES
+(1, 1),  -- Sameer enrolled in Next.js
+(1, 2),  -- Sameer enrolled in React.js
+(2, 1),  -- Zoya enrolled in Next.js
+(3, 2);  -- Nabil enrolled in React.js
