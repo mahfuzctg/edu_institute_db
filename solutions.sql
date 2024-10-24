@@ -81,3 +81,9 @@ WHERE student_id = (
 -- QUERY 4: DELETE COURSES WITH NO STUDENTS ENROLLED!
 DELETE FROM courses
 WHERE course_id NOT IN (SELECT DISTINCT course_id FROM enrollment);
+
+-- QUERY 5: RETRIVE NAMES OF STUDENTS WITH LIMIT AND OFFSET!
+SELECT student_name
+FROM students
+ORDER BY student_id
+LIMIT 2 OFFSET 2;  -- Start from the 3rd student
