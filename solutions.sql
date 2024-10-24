@@ -10,3 +10,10 @@ CREATE TABLE students (
     backend_mark INTEGER,            -- Backend assignment marks
     status VARCHAR(50)               -- Result status of the student
 );
+
+-- CREATE THE COURSES TABLE! --
+CREATE TABLE courses (
+    course_id SERIAL PRIMARY KEY,     -- Unique identifier for courses
+    course_name VARCHAR(100),         -- Course's name
+    credits INTEGER                   -- Number of credits for the course
+);
