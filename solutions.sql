@@ -1,1 +1,12 @@
 -- Active: 1729760896279@@127.0.0.1@5432@edu_institute_db
+
+--- CREATE A STUDENTS TABLE! ---
+CREATE TABLE students (
+    student_id SERIAL PRIMARY KEY,   -- Unique identifier for students
+    student_name VARCHAR(100),       -- Student's name
+    age INTEGER,                     -- Student's age
+    email VARCHAR(100),              -- Student's email address
+    frontend_mark INTEGER,           -- Frontend assignment marks
+    backend_mark INTEGER,            -- Backend assignment marks
+    status VARCHAR(50)               -- Result status of the student
+);
