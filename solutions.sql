@@ -87,3 +87,9 @@ SELECT student_name
 FROM students
 ORDER BY student_id
 LIMIT 2 OFFSET 2;  -- Start from the 3rd student
+
+-- QUERY 6: RETRIVE COURSE NAME AND NUMBER OF STUDENTS ENROLLED!
+SELECT c.course_name, COUNT(e.student_id) AS students_enrolled
+FROM courses c
+LEFT JOIN enrollment e ON c.course_id = e.course_id
+GROUP BY c.course_name;
