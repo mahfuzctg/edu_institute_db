@@ -60,3 +60,9 @@ INSERT INTO enrollment (student_id, course_id) VALUES
 INSERT INTO students (student_name, age, email, frontend_mark, backend_mark, status) VALUES
 ('Abdullah Al Mahfuz', 23, 'aamahfuz.pro@gmail.com', 60, 58, NULL);
 
+-- QUERY 2: RETRIVE NAMES OF STUDENTS ENROLLED IN NEXT.JS! 
+SELECT student_name
+FROM students s
+JOIN enrollment e ON s.student_id = e.student_id
+JOIN courses c ON e.course_id = c.course_id
+WHERE c.course_name = 'Next.js';
